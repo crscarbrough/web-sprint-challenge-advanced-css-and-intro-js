@@ -232,7 +232,7 @@ function getArtistByIndex(array, number) {
   return `the artist at index ${array[number].id} is ${array[number].name}`
  };
 
-
+ console.log(getArtistByIndex(artists, 3))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use get20s to do the following: 
@@ -284,9 +284,11 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function addArtist(array, id, name, years, genre, nationality, bio) {
+  array.push ({id:id, name:name, years:years, genre:genre, nationality:nationality, bio:bio});
+  return array;
 }
+console.log(addArtist(artists, 20, 'Claudia Scarbrough', '1986-Current Day', 'Web Design', 'spanish', 'Spends too many hours studying Javascript. Still doesnt understand'));
 
 
 
@@ -297,8 +299,13 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lotsOfArt(array, lotsPainters) {
+  const painters = [];
+  for(let i =0; i < artists.length; i++){
+    if(artists[i].paintings.includes('paintings: > 100')){
+      painters.push(array[i]);
+    }
+  }return painters
 }
 
 
